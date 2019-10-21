@@ -10,3 +10,27 @@ enum BikeType {
   ELECTRIC
   BEACH
 }
+
+type Product {
+  name: String!
+  price: Float!
+  image: String!
+  type: ProductType!
+  createdBy: User!
+  description: String
+  liquidCooled: Boolean
+  range: String
+  bikeType: BikeType
+}
+
+input NewProductInput {
+  name: String!
+  price: Float!
+  image: String!
+  type: ProductType!
+  createdBy: User!
+  description: String
+  liquidCooled: Boolean
+  range: String
+  bikeType: BikeType
+}

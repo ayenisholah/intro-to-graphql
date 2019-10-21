@@ -10,11 +10,23 @@ export const start = async () => {
     type Cat {
       name: String
       color: String
-      age: Int!
+      age: Int 
     }
 
     type Query {
       myCat: Cat
+      cats: [cat]
+      hello: String
+    }
+
+    input CatInput {
+      name: String
+      age: Int!
+      color: String
+    }
+
+    type Mutation {
+      newCat(input: CatInput!): cat!
     }
 
     schema {
